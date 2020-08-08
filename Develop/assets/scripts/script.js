@@ -18,7 +18,7 @@ function generatePassword() {
 
   //prompted for length of password between 8 and 128 characters
   var lenPass = "";
-  console.log(lenPass);
+  
 
   while (isNaN(parseInt(lenPass)) || parseInt(lenPass) < 8 || parseInt(lenPass) > 128) {
     lenPass = prompt("Please enter the length of password");
@@ -61,25 +61,25 @@ function generatePassword() {
   if (lowCase) {
     charSets += charLower;
   }
-  console.log(charSets);
+  
 
   // adding upper case letters
   if (uppCase) {
     charSets += charUpper;
   }
-  console.log(charSets);
+  
 
   // adding numbers
   if (numbers) {
     charSets += charNum
   }
-  console.log(charSets);
+
 
   // adding symbols
   if  (specSym) {
     charSets += CharSym;
   }
-  console.log(charSets);
+ 
   var randomPass = "";
 
   // Create a for loop to generate a random password for user 
@@ -87,9 +87,9 @@ function generatePassword() {
   // randomly select password for user bases on choices given
   var random = Math.floor(Math.random()  * charSets.length)
 
-  console.log(charSets[random]);
+  
   randomPass += charSets[random];
   } 
   return randomPass
-  console.log(randomPass);
+  
 }
